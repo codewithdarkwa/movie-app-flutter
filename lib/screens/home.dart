@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                 style: TextStyle(color: Colors.white),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
+                margin: const EdgeInsets.symmetric(vertical: 20),
                 height: 200,
                 child: FutureBuilder(
                   future: topRatedMovies,
@@ -148,7 +148,7 @@ class _HomeState extends State<Home> {
 
                         return Container(
                           width: 150,
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15)),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(15),
