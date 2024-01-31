@@ -31,7 +31,7 @@ class Api {
       List<Movie> movies = data.map((movie) => Movie.fromMap(movie)).toList();
       return movies;
     } else {
-      throw Exception('Failed to load upcoming movies');
+      throw Exception('Failed to load popular movies');
     }
   }
 
@@ -44,7 +44,7 @@ class Api {
       List<Movie> movies = data.map((movie) => Movie.fromMap(movie)).toList();
       return movies;
     } else {
-      throw Exception('Failed to load upcoming movies');
+      throw Exception('Failed to load top rated movies');
     }
   }
 }
