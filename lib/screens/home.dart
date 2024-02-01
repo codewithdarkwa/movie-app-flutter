@@ -52,13 +52,13 @@ class _HomeState extends State<Home> {
               //Carousel
               FutureBuilder(
                 future: upcomingMovies,
-                builder: (context, snaphot) {
-                  if (!snaphot.hasData) {
+                builder: (context, snapshot) {
+                  if (!snapshot.hasData) {
                     return const Center(
                       child: CircularProgressIndicator(),
                     );
                   }
-                  final movies = snaphot.data!;
+                  final movies = snapshot.data!;
 
                   return CarouselSlider.builder(
                     itemCount: movies.length,
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
                 style: TextStyle(color: Colors.white),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
+                margin: const EdgeInsets.symmetric(vertical: 20),
                 height: 200,
                 child: FutureBuilder(
                   future: popularMovies,
@@ -105,7 +105,7 @@ class _HomeState extends State<Home> {
 
                         return Container(
                           width: 150,
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15)),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(15),
